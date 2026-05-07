@@ -1,0 +1,31 @@
+<?php
+
+use App\Enums\sendTypeStatus;
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('send_types', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->integer('cost');
+            $table->string('status')->default(sendTypeStatus::Active->value);
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('send_types');
+    }
+};
