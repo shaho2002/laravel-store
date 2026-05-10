@@ -114,50 +114,21 @@
             <div>
                 <h4 class="font-DanaMedium"> دسته بندی : </h4>
                 <ul class="space-y-3 child:flex child:items-center child:justify-between child:cursor-pointer ">
-                    <li class="group">
-                        <span
-                            class="flex items-center justify-center transition-all duration-300 gap-x-1 group-hover:pr-2 group-hover:text-blue-500">
-                            <p>برسی موبایل</p>
-                            <svg class="w-4 h-4">
-                                <use href="#chevron-left"></use>
-                            </svg>
-                        </span>
-                        <span
-                            class="flex items-center justify-center w-5 h-5 text-xs text-white bg-blue-500 rounded-lg">12</span>
-                    </li>
-                    <li class="group">
-                        <span
-                            class="flex items-center justify-center transition-all duration-300 gap-x-1 group-hover:pr-2 group-hover:text-blue-500">
-                            <p>لپتاپ</p>
-                            <svg class="w-4 h-4">
-                                <use href="#chevron-left"></use>
-                            </svg>
-                        </span>
-                        <span
-                            class="flex items-center justify-center w-5 h-5 text-xs text-white bg-blue-500 rounded-lg">2</span>
-                    </li>
-                    <li class="group">
-                        <span
-                            class="flex items-center justify-center transition-all duration-300 gap-x-1 group-hover:pr-2 group-hover:text-blue-500">
-                            <p>هدفون و ساعت</p>
-                            <svg class="w-4 h-4">
-                                <use href="#chevron-left"></use>
-                            </svg>
-                        </span>
-                        <span
-                            class="flex items-center justify-center w-5 h-5 text-xs text-white bg-blue-500 rounded-lg">6</span>
-                    </li>
-                    <li class="group">
-                        <span
-                            class="flex items-center justify-center transition-all duration-300 gap-x-1 group-hover:pr-2 group-hover:text-blue-500">
-                            <p>تکنولوژی</p>
-                            <svg class="w-4 h-4">
-                                <use href="#chevron-left"></use>
-                            </svg>
-                        </span>
-                        <span
-                            class="flex items-center justify-center w-5 h-5 text-xs text-white bg-blue-500 rounded-lg">12</span>
-                    </li>
+                    @foreach ($this->articleCategories as $articleCategory )
+                        <li class="group">
+                            <span
+                                class="flex items-center justify-center transition-all duration-300 gap-x-1 group-hover:pr-2 group-hover:text-blue-500">
+                                <p>{{ $articleCategory->name }}</p>
+                                <svg class="w-4 h-4">
+                                    <use href="#chevron-left"></use>
+                                </svg>
+                            </span>
+                            <span
+                                class="flex items-center justify-center w-5 h-5 text-xs text-white bg-blue-500 rounded-lg">{{ App\Models\Article::query()->where('article_category_id', $articleCategory->id)->count() }}</span>
+                        </li>
+                    @endforeach
+                    
+
                 </ul>
             </div>
         </div>
