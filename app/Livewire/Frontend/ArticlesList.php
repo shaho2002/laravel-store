@@ -18,6 +18,12 @@ class ArticlesList extends Component
     public $order = 'newest';
     public $selected_category_id = null;
 
+    public function mount()
+    {
+        if (session('articleCategory_id')) {
+            $this->selected_category_id = session('articleCategory_id');
+        }
+    }
     public function orderBy($data)
     {
         $this->order = $data;

@@ -3,7 +3,7 @@
     <nav class="flex mt-8" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
             <li class="inline-flex items-center">
-                <a href="index.html"
+                <a href="{{ route('mainPage') }}"
                     class="inline-flex items-center text-sm text-gray-700 gap-x-1 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
                     <svg class="size-4 mb-0.5">
                         <use href="#home" />
@@ -17,7 +17,7 @@
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="m1 9 4-4-4-4" />
                 </svg>
-                <a href="shop.html"
+                <a href="{{ route('articles.list') }}"
                     class="inline-flex items-center text-sm text-gray-700 gap-x-1 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
                     مقالات
                 </a>
@@ -115,7 +115,7 @@
                 <h4 class="font-DanaMedium"> دسته بندی : </h4>
                 <ul class="space-y-3 child:flex child:items-center child:justify-between child:cursor-pointer ">
                     @foreach ($this->articleCategories as $articleCategory )
-                        <li class="group">
+                        <li class="group" wire:click="setArticleCategory ({{ $articleCategory->id }})">
                             <span
                                 class="flex items-center justify-center transition-all duration-300 gap-x-1 group-hover:pr-2 group-hover:text-blue-500">
                                 <p>{{ $articleCategory->name }}</p>

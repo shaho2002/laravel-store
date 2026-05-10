@@ -35,6 +35,11 @@ class Article extends Component
         ->where('status', ArticleStatus::Active->value)
         ->get();
     }
+    public function setArticleCategory($article_category_id)
+    {
+        session()->flash('articleCategory_id', $article_category_id);
+        return redirect()->route('articles.list');
+    }
 
     #[Layout('frontend.master'), Title(content: 'مقاله')]
 
