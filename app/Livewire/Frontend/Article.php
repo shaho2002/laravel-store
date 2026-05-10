@@ -4,6 +4,7 @@ namespace App\Livewire\Frontend;
 
 use App\Enums\ArticleStatus;
 use App\Models\Article as ModelsArticle;
+use App\Models\ArticleCategory;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
@@ -26,6 +27,18 @@ class Article extends Component
         return ModelsArticle::query()
         ->where('status', ArticleStatus::Active->value)
         ->orderBy('created_at','desc')->take(10)->get();
+    }
+    #[Computed(persist:true)]
+    public function articleCategories()
+    {
+        return ArticleCategory::query()
+        ->where('status', ArticleStatus::Active->value)
+        ->get();
+    }
+    public function setArticleCategory($article_category_id)
+    {
+        session()->flash('articleCategory_id', $article_category_id);
+        return redirect()->route('articles.list');
     }
 
     #[Layout('frontend.master'), Title(content: 'مقاله')]
