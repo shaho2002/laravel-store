@@ -120,9 +120,12 @@ class Brands extends Component
     public function render()
     { 
         if ($this->searchedData) {
-            $brands = Brand::where('name', 'like', '%' . $this->searchedData . '%')->paginate(10);
+            $brands = Brand::query()
+            ->where('name', 'like', '%' . $this->searchedData . '%')
+            ->paginate(10);
         } else {
-            $brands = Brand::paginate(10);
+            $brands = Brand::query()->
+            paginate(10);
         }
            
         return view('livewire.admin.brands.brands', compact('brands'));

@@ -64,6 +64,7 @@
                             <a href="{{ Route('home') }}">داشبورد</a>
                         </li>
                         <li> <a href="{{ Route('admin.orders') }}">سفارشات</a></li>
+                        <li> <a href="{{ Route('admin.slider.items') }}">اسلاید صفحه اصلی</a></li>
                         <li> <a href="{{ Route('admin.comments') }}">دیدگاه و نظرات</a></li>
                     </ul>
                 </li>
