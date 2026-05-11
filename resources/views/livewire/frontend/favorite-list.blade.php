@@ -44,12 +44,6 @@
                 </li>
                 <li class="hover:text-blue-500">
                     <svg class="w-6 h-6 ">
-                        <use href="#map"></use>
-                    </svg>
-                    <a href="dashboard-address.html">آدرس ها</a>
-                </li>
-                <li class="hover:text-blue-500">
-                    <svg class="w-6 h-6 ">
                         <use href="#bell"></use>
                     </svg>
                     <a href="dashboard-messages.html">پیام ها</a>
@@ -123,13 +117,7 @@
                                 <use href="#heart"></use>
                             </svg>
                             <a href="{{ route('favorite.list') }}">علاقه‌مندی ها</a>
-                        </li>
-                        <li class="hover:text-blue-500">
-                            <svg class="w-6 h-6 ">
-                                <use href="#map"></use>
-                            </svg>
-                            <a href="dashboard-address.html">آدرس ها</a>
-                        </li>
+                        </li>>
                         <li class="hover:text-blue-500">
                             <svg class="w-6 h-6 ">
                                 <use href="#bell"></use>
