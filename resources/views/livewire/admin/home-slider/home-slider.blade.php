@@ -8,7 +8,7 @@
                 {{ $this->sliderIndex ? 'ویرایش اسلاید' : 'افزودن اسلاید جدید' }}</h5>
         </div>
         <div class="mb-5">
-            <form class="space-y-5" wire:submit.prevent="createBrand">
+            <form class="space-y-5" wire:submit.prevent="createSlide">
                 <div x-data="{ uploading: false, progress: 0, message: '', messageType: '' }" x-on:livewire-upload-start="uploading = true; message = ''; messageType = ''"
                     x-on:livewire-upload-finish="
             uploading = false;
@@ -38,8 +38,8 @@
                         </div>
                         <div class="">
                             <label for="link">لینک</label>
-                            <input wire:model="link" id="link" type="text"
-                                placeholder="www.test.com" class="form-input">
+                            <input wire:model="link" id="link" type="text" placeholder="www.test.com"
+                                class="form-input">
                             <p class="mt-1 text-danger">
                                 @error('link')
                                     {{ $message }}
@@ -82,6 +82,22 @@
                                 </p>
                             </div>
                         </div>
+                        <div>
+                            <label class="block mb-2">وضعیت </label>
+                            <div class="flex items-center gap-3">
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" wire:model="status" value="active" name="status"
+                                        class="form-radio text-success">
+                                    <span>فعال</span>
+                                </label>
+
+                                <label class="inline-flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" wire:model="status" value="notActive" name="status"
+                                        class="form-radio text-danger">
+                                    <span>غیرفعال</span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
                     @if ($sliderIndex)
@@ -114,8 +130,8 @@
                                 placeholder="جستجو" />
                             <button type="submit" wire:model="searchedData"
                                 class="absolute inset-0 appearance-none h-9 w-9 peer-focus:text-primary ltr:right-auto rtl:left-auto">
-                                <svg class="mx-auto" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg class="mx-auto" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="11.5" cy="11.5" r="9.5" stroke="currentColor"
                                         stroke-width="1.5" opacity="0.5" />
                                     <path d="M18.5 18.5L22 22" stroke="currentColor" stroke-width="1.5"
@@ -151,7 +167,7 @@
 
         <div class="mb-5">
             @if ($slides->isEmpty())
-            <hr class="mb-4">
+                <hr class="mb-4">
                 <div class="text-center text-gray-500 ">موردی یافت نشد</div>
             @else
                 <div class="mt-3 table-responsive">
@@ -171,7 +187,7 @@
                                 <tr>
                                     <td>{{ $slides->firstItem() + $index }}</td>
                                     <td>{{ $slide->name }}</td>
-                                    <td>{{ $slide->slug }}</td>
+                                    <td>{{ $slide->link }}</td>
                                     <td>
                                         @if ($slide->image)
                                             <img src="{{ asset('images/slides/' . $slide->image) }}"
@@ -183,7 +199,11 @@
                                                 class="object-contain w-16 h-16 mx-auto rounded-md">
                                         @endif
                                     </td>
-                                    <td>{{ $slide->status }}</td>
+                                    @if ($slide->status === 'active')
+                                        <td class="text-success">فعال</td>
+                                    @elseif($slide->status === 'notActive')
+                                        <td class="text-danger">غیرفعال</td>
+                                    @endif
                                     <td class="border-b border-[#ebedf2] p-3 text-center dark:border-[#191e3a]">
                                         <button type="button" x-tooltip="Edit"
                                             wire:click="editBrand({{ $slide->id }})" @click="scrollToTop()">

@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class HomeSlider extends Model
 {
-    //
+    protected $fillable = [
+        'name',
+        'link',
+        'image',
+        'status'
+    ];
 }

@@ -4,18 +4,12 @@
     <div class="w-full px-3 mt-4 lg:container group lg:mt-10">
         <div dir="rtl" class="cursor-pointer swiper header-slider h-52 md:h-96">
             <div class="swiper-wrapper">
-                <a href="shop.html" class="swiper-slide">
-                    <img src="{{ url('frontend/images/slider/4.webp') }}" class="rounded-xl" alt="">
+                @foreach ($this->slides as $slide )
+                    <a href="{{ $slide->link }}" class="swiper-slide">
+                    <img src="{{ url('images/slides/' . $slide->image) }}" class="rounded-xl" alt="{{ $slide->name }}">
                 </a>
-                <a href="shop.html" class="swiper-slide">
-                    <img src="{{ url('frontend/images/slider/1.jpg') }}" class="rounded-xl" alt="">
-                </a>
-                <a href="shop.html" class="swiper-slide">
-                    <img src="{{ url('frontend/images/slider/2.jpg') }}" class="rounded-xl" alt="">
-                </a>
-                <a href="shop.html" class="swiper-slide">
-                    <img src="{{ url('frontend/images/slider/3.gif') }}" class="rounded-xl" alt="">
-                </a>
+                @endforeach
+
             </div>
             <div class="swiper-pagination-wrapper">
                 <div class="swiper-pagination"></div>

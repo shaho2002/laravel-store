@@ -20,7 +20,7 @@ class Categories extends Component
     public $categoryName;
     #[Validate('nullable|unique:categories,slug')]
     public $categorySlug;
-    #[Validate('nullable|mimes:jpeg,png,jpg|max:2048')]
+    #[Validate('nullable|mimes:jpeg,png,jpg,webp|max:2048')]
     public $image;
     public $parent_id;
     public $categoryIndex;
@@ -128,18 +128,18 @@ class Categories extends Component
     public function render()
     {
         if ($this->searchedData) {
-            $categories = Category::where('name', 'like', '%' . $this->searchedData . '%')->paginate(10);
+            $categories = Category::query()->where('name', 'like', '%' . $this->searchedData . '%')->paginate(10);
         } else {
             if ($this->selectedCategory === 'originalCategories') {
                 $categories = Category::query()->where('parent_id', 0)->paginate(10);
             } elseif ($this->selectedCategory === 'subCategories') {
                 $categories = Category::query()->where('parent_id', '!=', 0)->paginate(10);
             } else {
-                $categories = Category::where('parent_id', $this->selectedCategory)->paginate(10);
+                $categories = Category::query()->where('parent_id', $this->selectedCategory)->paginate(10);
             }
         }
 
-        $allCategories = Category::where('parent_id', 0)->pluck('name', 'id');
+        $allCategories = Category::query()->where('parent_id', 0)->pluck('name', 'id');
         return view('livewire.admin.categories.categories', compact('allCategories', 'categories'));
     }
 }

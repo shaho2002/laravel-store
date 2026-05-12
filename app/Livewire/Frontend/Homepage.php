@@ -5,11 +5,13 @@ namespace App\Livewire\Frontend;
 use App\Enums\ArticleStatus;
 use App\Enums\brandStatus;
 use App\Enums\categoryStatus;
+use App\Enums\HomeSlideStatus;
 use App\Enums\productStatus;
 use App\Models\Article;
 use App\Models\Brand;
 use App\Models\Cart;
 use App\Models\Category;
+use App\Models\HomeSlider;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -24,6 +26,13 @@ class Homepage extends Component
     public $alertType;
     public $alertTitle;
 
+    #[Computed(persist: true)]
+    public function slides()
+    {
+        return HomeSlider::query()
+            ->where('status', HomeSlideStatus::Active->value)
+            ->get();
+    }
     #[Computed(persist: true)]
     public function newestProducts()
     {
@@ -56,11 +65,11 @@ class Homepage extends Component
             ->where('status', brandStatus::Active->value)
             ->get();
     }
-    #[Computed(persist:true)]
+    #[Computed(persist: true)]
     public function articles()
     {
         return Article::query()
-        ->where('status',ArticleStatus::Active->value)->get();
+            ->where('status', ArticleStatus::Active->value)->get();
     }
     public function addToCart($product_id)
     {
@@ -109,7 +118,7 @@ class Homepage extends Component
     }
     public function addToFavorite($product_id)
     {
-         if (auth::user()) {
+        if (auth::user()) {
             $user = User::query()
                 ->with('favorite_products')
                 ->findOrFail(auth::user()->id);

@@ -27,8 +27,8 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->string('status')->default(categoryStatus::Active);
             $table->softDeletes();
-            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');;
-            $table->foreignId('brand_id')->constrained('brands')->onDelete('cascade');;
+            $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete();
+            $table->foreignId('brand_id')->constrained('brands')->cascadeOnDelete();
             $table->timestamps();
         });
     }
