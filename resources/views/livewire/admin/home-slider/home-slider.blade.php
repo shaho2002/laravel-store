@@ -37,7 +37,9 @@
                             </p>
                         </div>
                         <div class="">
-                            <label for="link">لینک</label>
+                            <label for="link">لینک
+                                <span class=" text-danger">*</span>
+                            </label>
                             <input wire:model="link" id="link" type="text" placeholder="www.test.com"
                                 class="form-input">
                             <p class="mt-1 text-danger">
@@ -47,7 +49,9 @@
                             </p>
                         </div>
                         <div class="">
-                            <label for="image">عکس / گیف</label>
+                            <label for="image">عکس / گیف
+                                <span class=" text-danger">*</span>
+                            </label>
                             <input id="image" type="file" wire:model="image" x-ref="imageInput"
                                 x-on:change="
                         if (!$event.target.files || !$event.target.files.length) {
@@ -206,7 +210,7 @@
                                     @endif
                                     <td class="border-b border-[#ebedf2] p-3 text-center dark:border-[#191e3a]">
                                         <button type="button" x-tooltip="Edit"
-                                            wire:click="editBrand({{ $slide->id }})" @click="scrollToTop()">
+                                            wire:click="editSlide({{ $slide->id }})" @click="scrollToTop()">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 class="h-4.5 w-4.5 ltr:mr-2 rtl:ml-2">

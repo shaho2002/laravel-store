@@ -28,6 +28,7 @@ class HomeSlider extends Component
         $this->validate([
             'name' => 'required',
             'link' => 'required',
+            'image' => 'required | mimes:jpeg,png,jpg,gif|max:2048'
         ]);
         if ($this->image) {
             $imageName = $this->image->hashName();
@@ -43,6 +44,53 @@ class HomeSlider extends Component
         $this->reset();
         $this->alertType = 'success';
         $this->alertMessage = 'اسلاید جدید با موفقیت ایجاد شد';
+        $this->dispatch('sweetAlert', message: $this->alertMessage, type: $this->alertType);
+    }
+    public function editSlide($id)
+    {
+        $this->resetErrorBag();
+        $this->resetValidation();
+        $this->sliderIndex = $id;
+        $slide = ModelsHomeSlider::query()->findOrFail($id);
+        $this->name = $slide->name;
+        $this->link = $slide->link;
+        $this->status = $slide->status;
+    }
+    public function updateBrand()
+    {
+        $slide = ModelsHomeSlider::query()->findOrFail($this->sliderIndex);
+        $this->validate([
+            'name' => 'required',
+            'link' => 'required',
+            'image' => 'nullable | mimes:jpeg,png,jpg,gif|max:2048'
+        ]);
+
+        $oldImage = $slide->image;
+
+        if ($this->image) {
+            $imageName = $this->image->hashName();
+            $this->image->storeAs('images/slides', $imageName, 'public');
+
+            if ($oldImage) {
+                $oldImagePath = public_path('images/slides/' . $oldImage);
+                if (file_exists($oldImagePath)) {
+                    unlink($oldImagePath);
+                }
+            }
+        } else {
+            $imageName = $oldImage;
+        }
+
+        $slide->update([
+            'name' => $this->name,
+            'link' => $this->link,
+            'image' => $imageName,
+            'status' => $this->status,
+        ]);
+
+        $this->reset();
+        $this->alertType = 'success';
+        $this->alertMessage = 'اسلاید با موفقیت ویرایش شد';
         $this->dispatch('sweetAlert', message: $this->alertMessage, type: $this->alertType);
     }
 
