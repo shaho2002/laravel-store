@@ -10,10 +10,11 @@ use Livewire\Attributes\On;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Livewire\WithPagination;
 
 class HomeSlider extends Component
 {
-    use WithFileUploads;
+    use WithFileUploads , WithPagination;
     public $name;
     public $link;
     public $image;
@@ -63,7 +64,7 @@ class HomeSlider extends Component
         $this->resetErrorBag();
         $this->resetValidation();
     }
-    public function updateBrand()
+    public function updateSlide()
     {
         $slide = ModelsHomeSlider::query()->findOrFail($this->sliderIndex);
         $this->validate([
@@ -117,6 +118,10 @@ class HomeSlider extends Component
         $this->alertType = 'success';
         $this->alertMessage = 'اسلاید مورد نظر با موفقیت حذف شد';
         $this->dispatch('sweetAlert', message: $this->alertMessage, type: $this->alertType);
+    }
+    public function search()
+    {
+        $this->resetPage();
     }
 
     #[Layout('admin.master'), Title('مدیریت اسلاید‌ها')]
