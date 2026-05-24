@@ -47,13 +47,14 @@ class TrashedUsers extends Component
     public function render()
     {
         if ($this->searchedData) {
-            $users = User::where('name', 'like', '%' . $this->searchedData . '%')
+            $users = User::query()
+                ->where('name', 'like', '%' . $this->searchedData . '%')
                 ->onlyTrashed()
                 ->paginate(10);
         } else {
             $users = User::onlyTrashed()->paginate(10);
         }
 
-        return view('livewire.admin.users.trashed-users',compact('users'));
+        return view('livewire.admin.users.trashed-users', compact('users'));
     }
 }

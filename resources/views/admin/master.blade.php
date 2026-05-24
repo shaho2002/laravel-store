@@ -794,6 +794,24 @@
                 }
             });
         }
+        // Home slider
+        async function deleteSlide(slide_id) {
+            new window.Swal({
+                icon: 'warning',
+                title: 'آیا مطمن هستید؟',
+                text: "این مورد از لیست اسلایدها حذف خواهد شد",
+                showCancelButton: true,
+                confirmButtonText: 'تایید',
+                cancelButtonText: 'لغو',
+                padding: '2em',
+            }).then((result) => {
+                if (result.value) {
+                    Livewire.dispatch('destroySlide', {
+                        slide_id: slide_id
+                    })
+                }
+            });
+        }
 
         // main section
         document.addEventListener('alpine:init', () => {

@@ -223,7 +223,7 @@
                                             </svg>
                                         </button>
                                         <button type="button" x-tooltip="Delete"
-                                            wire:click="$dispatch('deleteConfirm',{ brand_id : {{ $slide->id }} })">
+                                            wire:click="$dispatch('deleteConfirm',{ slide_id : {{ $slide->id }} })">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
                                                 <path d="M20.5001 6H3.5" stroke="currentColor" stroke-width="1.5"
@@ -266,8 +266,8 @@
                 showAlert(alertMessage, alertType);
             });
             Livewire.on('deleteConfirm', (event) => {
-                const brand_id = event.brand_id;
-                deleteBrand(brand_id);
+                const slide_id = event.slide_id;
+                deleteSlide(slide_id);
             });
         });
     </script>

@@ -6,6 +6,7 @@ use App\Enums\HomeSlideStatus;
 use App\Models\HomeSlider as ModelsHomeSlider;
 use Illuminate\Support\Str;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\On;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -97,6 +98,24 @@ class HomeSlider extends Component
         $this->reset();
         $this->alertType = 'success';
         $this->alertMessage = 'اسلاید با موفقیت ویرایش شد';
+        $this->dispatch('sweetAlert', message: $this->alertMessage, type: $this->alertType);
+    }
+    #[On('destroySlide')]
+    public function destroySlide($slide_id)
+    {
+        $this->reset();
+        $this->resetErrorBag();
+        $this->resetValidation();
+        $slide = ModelsHomeSlider::query()->findOrFail($slide_id);
+        if ($slide->image) {
+            $image = public_path('images/slides/' . $slide->image);
+            if (file_exists($image)) {
+                unlink($image);
+            }
+        }
+        $slide->delete();
+        $this->alertType = 'success';
+        $this->alertMessage = 'اسلاید مورد نظر با موفقیت حذف شد';
         $this->dispatch('sweetAlert', message: $this->alertMessage, type: $this->alertType);
     }
 
