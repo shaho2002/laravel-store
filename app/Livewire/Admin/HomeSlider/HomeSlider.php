@@ -56,6 +56,12 @@ class HomeSlider extends Component
         $this->link = $slide->link;
         $this->status = $slide->status;
     }
+    public function editCancel()
+    {
+        $this->reset();
+        $this->resetErrorBag();
+        $this->resetValidation();
+    }
     public function updateBrand()
     {
         $slide = ModelsHomeSlider::query()->findOrFail($this->sliderIndex);
