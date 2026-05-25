@@ -17,6 +17,7 @@ use App\Livewire\Admin\Categories\CategoryFeature;
 use App\Livewire\Admin\Categories\TrashedCategories;
 use App\Livewire\Admin\Colors\TrashedColors;
 use App\Livewire\Admin\Comments\Comments;
+use App\Livewire\Admin\Footer\Footer;
 use App\Livewire\Admin\HomeSlider\HomeSlider;
 use App\Livewire\Admin\Orders\OrderDetails;
 use App\Livewire\Admin\Orders\Orders;
@@ -99,6 +100,9 @@ Route::get('/trashedArticle', TrashedArticles::class)->name('admin.trashed.artic
 
 // -- homeSlider --
 Route::get('/sliderItems',HomeSlider::class)->name('admin.slider.items');
+
+// -- footer --
+Route::get('/footer',Footer::class)->name('admin.footer');
 
 
 

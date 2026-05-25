@@ -66,6 +66,7 @@
                         <li> <a href="{{ Route('admin.orders') }}">سفارشات</a></li>
                         <li> <a href="{{ Route('admin.slider.items') }}">اسلایدر صفحه اصلی</a></li>
                         <li> <a href="{{ Route('admin.comments') }}">دیدگاه و نظرات</a></li>
+                        <li> <a href="{{ Route('admin.footer') }}">فوتر</a></li>
                     </ul>
                 </li>
                 {{--  Users --}}

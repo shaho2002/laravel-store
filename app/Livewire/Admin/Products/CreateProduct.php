@@ -130,10 +130,16 @@ class CreateProduct extends Component
             $this->selectedBrand = Brand::query()->find($this->brand_id)->name;
         }
         if ($this->colors_id) {
-            $this->selectedColors = Color::query()->whereIn('id', $this->colors_id)->pluck('name')->toArray();
+            $this->selectedColors = Color::query()
+            ->whereIn('id', $this->colors_id)
+            ->pluck('name')
+            ->toArray();
         }
         if ($this->warranties_id) {
-            $this->selectedWarranties = Warranty::query()->whereIn('id', $this->warranties_id)->pluck('name')->toArray();
+            $this->selectedWarranties = Warranty::query()
+            ->whereIn('id', $this->warranties_id)
+            ->pluck('name')
+            ->toArray();
         }
         return view('livewire.admin.products.create-product', compact('colors', 'brands', 'categories', 'warranties'));
     }
