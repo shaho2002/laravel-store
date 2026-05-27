@@ -53,3 +53,4 @@ Route::get('/articlesList', ArticlesList::class)->name('articles.list');
 Route::get('/article/{article_slug}', Article::class)->name('article');
 
 
+

@@ -134,7 +134,7 @@
                                 </svg>
                                 لیست پیام ها
                             </a>
-                            <a href="dashboard-account.html"
+                            <a href="{{ route('user.profile') }}"
                                 class="flex items-center gap-x-2 hover:bg-blue-500 hover:text-gray-100">
                                 <svg class="w-5 h-5">
                                     <use href="#cog"></use>
@@ -379,51 +379,7 @@
                         وبلاگ
                     </a>
                 </li>
-                <!-- MENU ITEM --- Solid submenu -->
-                <li class="menu-item group">
-                    <a class="cursor-pointer menu-item_link">
-                        منوی ساده
-                        <svg class="duration-300 size-4 group-hover:rotate-180">
-                            <use href="#chevron" />
-                        </svg>
-                    </a>
-                    <ul class="solid-menu">
-                        <li>
-                            <a href="aboute-us.html">درباره ما</a>
-                        </li>
-                        <li>
-                            <a href="questions.html">سوالات متداول</a>
-                        </li>
-                        <li>
-                            <a href="contact-us.html">تماس با ما</a>
-                        </li>
-                        <li class="solid-submenu_link">
-                            <a href="#">صفحات</a>
-                            <svg class="duration-300 rotate-90 size-4">
-                                <use href="#chevron" />
-                            </svg>
-                            <ul class="solid-submenu">
-                                <li>
-                                    <a href="{{ route('shop') }}">فروشگاه</a>
-                                </li>
-                                <li>
-                                    <a href="product-details.html">جزئیات محصول</a>
-                                </li>
-                                <li>
-                                    <a href="dashboard.html">پنل کاربری</a>
-                                </li>
-                                <li>
-                                    <a href="shopping-cart.html">سبد خرید</a>
-                                </li>
-                                <li>
-                                    <a href="login.html">صفحه ورود</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
             </ul>
-
         </div>
     </div>
     </div>
