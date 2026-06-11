@@ -1,61 +1,199 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    
+# 🛒 فروشگاه دیجیتال لاراولی | پروژه تمرینی پیشرفته
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![Laravel Version](https://img.shields.io/badge/Laravel-12.x-red?style=for-the-badge&logo=laravel)](https://laravel.com)
+[![Livewire Version](https://img.shields.io/badge/Livewire-3.x-pink?style=for-the-badge&logo=livewire)](https://livewire.laravel.com)
+[![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue?style=for-the-badge&logo=php)](https://php.net)
+[![Status](https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge)]()
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📖 درباره پروژه
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+> یک پروژه **تمرینی** فروشگاهی کامل با معماری مدرن لاراول و لایو‌وایر. سایت کاملاً به **زبان فارسی** پیاده‌سازی شده و سطح آن **متوسط رو به بالا** ارزیابی می‌شود.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## ✨ ویژگی‌های کلیدی
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 🔧 پنل مدیریت
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- 👥 مدیریت کاربران (ویرایش، حذف، نقش‌ها و دسترسی‌ها)
+- 📂 مدیریت دسته‌بندی‌ها
+- 🏷️ مدیریت برندها
+- 🎨 مدیریت رنگ‌ها
+- ⚙️ مدیریت ویژگی‌های پویا (رم، حافظه، پردازنده)
+- 📦 مدیریت محصولات (افزودن، ویرایش، حذف)
+- 🖼️ گالری محصول (چندین تصویر برای هر محصول)
+- 📝 مدیریت مقالات و وبلاگ
+- 🛍️ کنترل و مشاهده سفارشات کاربران
+- 💬 مدیریت کامنت‌ها (تأیید و غیرفعال کردن)
+- 🦶 فوتر داینامیک (قابل تغییر از پنل ادمین)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🛍️ بخش فروشگاهی
 
-## Laravel Sponsors
+- 🏠 صفحه اصلی با نمایش محصولات **پر فروش** و جدید
+- 🔍 نمایش جزییات کامل محصول با قابلیت تغییر رنگ
+- 💰 تغییر خودکار قیمت بر اساس رنگ انتخاب شده
+- 🎯 **فیلتر محصولات** (بر اساس دسته‌بندی، جدیدترین و...)
+- 💬 امکان کامنت‌گذاری کاربران روی محصولات
+- 🛒 سبد خرید هوشمند (در صورت موجود نبودن کالا، امکان افزودن وجود ندارد)
+- 💳 اتصال به درگاه پرداخت بانکی
+- ❤️ لیست علاقه‌مندی‌های هر کاربر
+- 📍 آدرس برای هر کاربر
+- 🏷️ تخفیف‌های پویا روی محصولات
+- 🔐 سیستم احراز هویت لاراول (ورود و ثبت‌نام)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 📝 بخش وبلاگ و مقالات
 
-### Premium Partners
+- 📚 نمایش همه مقالات با صفحه‌بندی
+- 🎯 **فیلتر مقالات** (بر اساس دسته‌بندی، تاریخ انتشار)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## 🧱 ساختار فنی
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **فریمورک**: Laravel 12 + Livewire 3
+- **بدون jQuery اضافی**
+- **طراحی واکنش‌گرا** (Responsive)
+- **کاملاً فارسی و RTL**
+- **کدنویسی و ساختار قابل توسعه**
+- **فیلترهای پویا** در محصولات و مقالات
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 📋 پیش‌نیازها
 
-## Security Vulnerabilities
+- PHP 8.2 یا بالاتر
+- Composer (آخرین نسخه)
+- Node.js 18.x یا بالاتر
+- MySQL 5.7+ / 8.x
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 📊 وضعیت پروژه
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+| وضعیت | توضیحات |
+| --- | --- |
+| 🟡 در حال توسعه | پروژه تمرینی – فعال |
+| 📈 سطح | متوسط رو به بالا |
+| 🌐 زبان رابط | فارسی |
+
+---
+
+## 🤝 مشارکت در توسعه
+
+از آنجا که این یک **پروژه تمرینی** است، هرگونه ایده، بهبود یا گزارش باگ با کمال میل پذیرفته می‌شود.
+
+- 🔁 Pull Request بفرستید
+- 🐛 Issue باز کنید
+- ⭐ ستاره فراموش نشود
+
+---
+
+**❤️ سپاس از توجه شما ❤️**
+
+---
+
+# Laravel Digital Store | Advanced Demo Project
+
+[![Laravel Version](https://img.shields.io/badge/Laravel-12.x-red?style=for-the-badge&logo=laravel)](https://laravel.com)
+[![Livewire Version](https://img.shields.io/badge/Livewire-3.x-pink?style=for-the-badge&logo=livewire)](https://livewire.laravel.com)
+[![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue?style=for-the-badge&logo=php)](https://php.net)
+[![Status](https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge)]()
+
+---
+
+## 📖 About The Project
+
+> A **practice** e-commerce project built with modern Laravel + Livewire stack. The site is fully **Persian (RTL)** and represents an **upper-intermediate** level of implementation.
+
+---
+
+## ✨ Key Features
+
+### 🔧 Admin Panel
+
+- 👥 User management (edit, delete, roles & permissions)
+- 📂 Category management
+- 🏷️ Brand management
+- 🎨 Color management
+- ⚙️ Dynamic attribute management (RAM, storage, CPU)
+- 📦 Product management (add, edit, delete)
+- 🖼️ Product gallery (multiple images per product)
+- 📝 Blog & article management
+- 🛍️ Order control & monitoring
+- 💬 Comment management (approve & disable)
+- 🦶 Dynamic footer (editable from admin panel)
+
+### 🛍️ Storefront
+
+- 🏠 Homepage with **bestselling** & new products
+- 🔍 Product details with color selection
+- 💰 Dynamic price change based on selected color
+- 🎯 **Product filtering** (by category, latest, and more)
+- 💬 User commenting on products
+- 🛒 Smart cart (cannot add to cart if out of stock)
+- 💳 Payment gateway integration
+- ❤️ User wishlist
+- 📍 Address for each user
+- 🏷️ Dynamic discounts on products
+- 🔐 Laravel authentication system (login & register)
+
+### 📝 Blog & Articles Section
+
+- 📚 Paginated list of all articles
+- 🎯 **Article filtering** (by category, publish date)
+
+---
+
+## 🧱 Tech Stack
+
+- **Framework**: Laravel 12 + Livewire 3
+- **No extra jQuery**
+- **Fully Responsive Design**
+- **Persian RTL Support**
+- **Extendable code & structure**
+- **Dynamic filters** for products & articles
+
+---
+
+## 📋 Requirements
+
+- PHP 8.2 or higher
+- Composer (latest version)
+- Node.js 18.x or higher
+- MySQL 5.7+ / 8.x
+
+---
+
+## 📊 Project Status
+
+| Status | Description |
+| --- | --- |
+| 🟡 In Development | Practice project – active |
+| 📈 Level | Upper-intermediate |
+| 🌐 Language | Persian (Farsi) |
+
+---
+
+## 🤝 Contributing
+
+Since this is a **practice project**, any ideas, improvements, or bug reports are warmly welcomed.
+
+- 🔁 Send a Pull Request
+- 🐛 Open an Issue
+- ⭐ Don't forget to star
+
+---
+
+**❤️ Thank you for your attention ❤️**
+
+</body>
+</html>
