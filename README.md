@@ -1,199 +1,159 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
-    
-# 🛒 فروشگاه دیجیتال لاراولی | پروژه تمرینی پیشرفته
+# 🛒 Laravel Digital Store
 
-[![Laravel Version](https://img.shields.io/badge/Laravel-12.x-red?style=for-the-badge&logo=laravel)](https://laravel.com)
-[![Livewire Version](https://img.shields.io/badge/Livewire-3.x-pink?style=for-the-badge&logo=livewire)](https://livewire.laravel.com)
-[![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue?style=for-the-badge&logo=php)](https://php.net)
-[![Status](https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge)]()
+A Persian RTL e-commerce application built with **Laravel 12, Livewire 3, PHP, and MySQL**.
+
+This project was built as a hands-on learning project to practice backend development, business logic, authentication, product and order management, filtering, cart and wishlist functionality, and payment integration.
 
 ---
 
-## 📖 درباره پروژه
+## 🎬 Demo
 
-> یک پروژه **تمرینی** فروشگاهی کامل با معماری مدرن لاراول و لایو‌وایر. سایت کاملاً به **زبان فارسی** پیاده‌سازی شده و سطح آن **متوسط رو به بالا** ارزیابی می‌شود.
-
----
-
-## ✨ ویژگی‌های کلیدی
-
-### 🔧 پنل مدیریت
-
-- 👥 مدیریت کاربران (ویرایش، حذف، نقش‌ها و دسترسی‌ها)
-- 📂 مدیریت دسته‌بندی‌ها
-- 🏷️ مدیریت برندها
-- 🎨 مدیریت رنگ‌ها
-- ⚙️ مدیریت ویژگی‌های پویا (رم، حافظه، پردازنده)
-- 📦 مدیریت محصولات (افزودن، ویرایش، حذف)
-- 🖼️ گالری محصول (چندین تصویر برای هر محصول)
-- 📝 مدیریت مقالات و وبلاگ
-- 🛍️ کنترل و مشاهده سفارشات کاربران
-- 💬 مدیریت کامنت‌ها (تأیید و غیرفعال کردن)
-- 🦶 فوتر داینامیک (قابل تغییر از پنل ادمین)
-
-### 🛍️ بخش فروشگاهی
-
-- 🏠 صفحه اصلی با نمایش محصولات **پر فروش** و جدید
-- 🔍 نمایش جزییات کامل محصول با قابلیت تغییر رنگ
-- 💰 تغییر خودکار قیمت بر اساس رنگ انتخاب شده
-- 🎯 **فیلتر محصولات** (بر اساس دسته‌بندی، جدیدترین و...)
-- 💬 امکان کامنت‌گذاری کاربران روی محصولات
-- 🛒 سبد خرید هوشمند (در صورت موجود نبودن کالا، امکان افزودن وجود ندارد)
-- 💳 اتصال به درگاه پرداخت بانکی
-- ❤️ لیست علاقه‌مندی‌های هر کاربر
-- 📍 آدرس برای هر کاربر
-- 🏷️ تخفیف‌های پویا روی محصولات
-- 🔐 سیستم احراز هویت لاراول (ورود و ثبت‌نام)
-
-### 📝 بخش وبلاگ و مقالات
-
-- 📚 نمایش همه مقالات با صفحه‌بندی
-- 🎯 **فیلتر مقالات** (بر اساس دسته‌بندی، تاریخ انتشار)
+<!-- ADD GIF HERE
+Show a short real workflow:
+Product page → select color/variation → add to cart → cart → checkout
+Recommended length: 10–20 seconds
+-->
 
 ---
 
-## 🧱 ساختار فنی
+## 📸 Screenshots
 
-- **فریمورک**: Laravel 12 + Livewire 3
-- **بدون jQuery اضافی**
-- **طراحی واکنش‌گرا** (Responsive)
-- **کاملاً فارسی و RTL**
-- **کدنویسی و ساختار قابل توسعه**
-- **فیلترهای پویا** در محصولات و مقالات
+<!-- ADD SCREENSHOT 1: Homepage / Product listing -->
 
----
+<!-- ADD SCREENSHOT 2: Product details + color/attributes -->
 
-## 📋 پیش‌نیازها
+<!-- ADD SCREENSHOT 3: Shopping cart / Checkout -->
 
-- PHP 8.2 یا بالاتر
-- Composer (آخرین نسخه)
-- Node.js 18.x یا بالاتر
-- MySQL 5.7+ / 8.x
+<!-- ADD SCREENSHOT 4: Admin panel / Product management -->
+
+<!-- ADD SCREENSHOT 5: Order management (optional) -->
 
 ---
 
-## 📊 وضعیت پروژه
-
-| وضعیت | توضیحات |
-| --- | --- |
-| 🟡 در حال توسعه | پروژه تمرینی – فعال |
-| 📈 سطح | متوسط رو به بالا |
-| 🌐 زبان رابط | فارسی |
-
----
-
-## 🤝 مشارکت در توسعه
-
-از آنجا که این یک **پروژه تمرینی** است، هرگونه ایده، بهبود یا گزارش باگ با کمال میل پذیرفته می‌شود.
-
-- 🔁 Pull Request بفرستید
-- 🐛 Issue باز کنید
-- ⭐ ستاره فراموش نشود
-
----
-
-**❤️ سپاس از توجه شما ❤️**
-
----
-
-# Laravel Digital Store | Advanced Demo Project
-
-[![Laravel Version](https://img.shields.io/badge/Laravel-12.x-red?style=for-the-badge&logo=laravel)](https://laravel.com)
-[![Livewire Version](https://img.shields.io/badge/Livewire-3.x-pink?style=for-the-badge&logo=livewire)](https://livewire.laravel.com)
-[![PHP Version](https://img.shields.io/badge/PHP-8.2+-blue?style=for-the-badge&logo=php)](https://php.net)
-[![Status](https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge)]()
-
----
-
-## 📖 About The Project
-
-> A **practice** e-commerce project built with modern Laravel + Livewire stack. The site is fully **Persian (RTL)** and represents an **upper-intermediate** level of implementation.
-
----
-
-## ✨ Key Features
-
-### 🔧 Admin Panel
-
-- 👥 User management (edit, delete, roles & permissions)
-- 📂 Category management
-- 🏷️ Brand management
-- 🎨 Color management
-- ⚙️ Dynamic attribute management (RAM, storage, CPU)
-- 📦 Product management (add, edit, delete)
-- 🖼️ Product gallery (multiple images per product)
-- 📝 Blog & article management
-- 🛍️ Order control & monitoring
-- 💬 Comment management (approve & disable)
-- 🦶 Dynamic footer (editable from admin panel)
+## ✨ Features
 
 ### 🛍️ Storefront
 
-- 🏠 Homepage with **bestselling** & new products
-- 🔍 Product details with color selection
-- 💰 Dynamic price change based on selected color
-- 🎯 **Product filtering** (by category, latest, and more)
-- 💬 User commenting on products
-- 🛒 Smart cart (cannot add to cart if out of stock)
-- 💳 Payment gateway integration
-- ❤️ User wishlist
-- 📍 Address for each user
-- 🏷️ Dynamic discounts on products
-- 🔐 Laravel authentication system (login & register)
+* Product listing and details
+* Categories, brands, colors, and dynamic attributes
+* Dynamic pricing based on selected product color
+* Product search, filtering, and pagination
+* Shopping cart with stock validation
+* Wishlist
+* Dynamic product discounts
+* User comments
+* Address management
+* Authentication and registration
+* Payment gateway integration
 
-### 📝 Blog & Articles Section
+### 🔧 Admin Panel
 
-- 📚 Paginated list of all articles
-- 🎯 **Article filtering** (by category, publish date)
+* User management and role-based access
+* Product, category, brand, and color management
+* Dynamic product attributes such as RAM, storage, and CPU
+* Multiple images for each product
+* Order management
+* Comment moderation
+* Blog and article management
+* Dynamic footer/content management
+
+### 📝 Blog
+
+* Article listing with pagination
+* Filtering by category and publish date
+* Article comments
 
 ---
 
 ## 🧱 Tech Stack
 
-- **Framework**: Laravel 12 + Livewire 3
-- **No extra jQuery**
-- **Fully Responsive Design**
-- **Persian RTL Support**
-- **Extendable code & structure**
-- **Dynamic filters** for products & articles
+* **PHP 8.2+**
+* **Laravel 12**
+* **Livewire 3**
+* **MySQL**
+* **Blade**
+* **Tailwind CSS**
+* **Alpine.js**
+* **JavaScript**
+* **Vite**
+* **Git**
+
+The interface is fully **Persian and RTL** and responsive across different screen sizes.
 
 ---
 
 ## 📋 Requirements
 
-- PHP 8.2 or higher
-- Composer (latest version)
-- Node.js 18.x or higher
-- MySQL 5.7+ / 8.x
+* PHP 8.2+
+* Composer
+* Node.js
+* MySQL 5.7+ / 8.x
 
 ---
 
-## 📊 Project Status
+## ⚙️ Installation
 
-| Status | Description |
-| --- | --- |
-| 🟡 In Development | Practice project – active |
-| 📈 Level | Upper-intermediate |
-| 🌐 Language | Persian (Farsi) |
+Clone the repository:
+
+```bash
+git clone https://github.com/shaho2002/laravel-store.git
+cd laravel-store
+```
+
+Install PHP dependencies:
+
+```bash
+composer install
+```
+
+Install frontend dependencies:
+
+```bash
+npm install
+```
+
+Create the environment file:
+
+```bash
+cp .env.example .env
+```
+
+Generate the application key:
+
+```bash
+php artisan key:generate
+```
+
+Configure your database in `.env`, then run:
+
+```bash
+php artisan migrate
+```
+
+Start the Laravel development server:
+
+```bash
+php artisan serve
+```
+
+For frontend assets:
+
+```bash
+npm run dev
+```
 
 ---
 
-## 🤝 Contributing
+## 📌 Project Status
 
-Since this is a **practice project**, any ideas, improvements, or bug reports are warmly welcomed.
+This is a personal learning and portfolio project focused on practicing Laravel backend development and implementing a realistic set of e-commerce features.
 
-- 🔁 Send a Pull Request
-- 🐛 Open an Issue
-- ⭐ Don't forget to star
+It is not presented as a production e-commerce platform.
 
 ---
 
-**❤️ Thank you for your attention ❤️**
+## 🤝 Feedback
 
-</body>
-</html>
+Feedback, suggestions, and improvements are welcome.
+
+Feel free to open an Issue or Pull Request if you have an idea for improving the project.
