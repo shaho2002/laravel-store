@@ -6,27 +6,39 @@ This project was built as a hands-on learning project to practice backend develo
 
 ---
 
-## 🎬 Demo
+## 🎥 Demo Videos
 
-<!-- ADD GIF HERE
-Show a short real workflow:
-Product page → select color/variation → add to cart → cart → checkout
-Recommended length: 10–20 seconds
--->
+### 🌐 Website Overview
+
+A short overview of the storefront, layout, and main sections of the website.
+
+[▶️ Watch Website Overview](public/docs/videos/Video_260920131126.mp4)
+
+### 🛒 Shopping Workflow
+
+A short demonstration of the shopping process, from browsing a product to adding it to the cart and completing the purchase flow.
+
+[▶️ Watch Shopping Workflow](public/docs/videos/Video_260920131537%20%282%29.mp4)
 
 ---
 
 ## 📸 Screenshots
 
-<!-- ADD SCREENSHOT 1: Homepage / Product listing -->
+### 🔧 Admin Panel
 
-<!-- ADD SCREENSHOT 2: Product details + color/attributes -->
+![Admin Panel](public/docs/images/Screenshot%202026-09-20%20231240.png)
 
-<!-- ADD SCREENSHOT 3: Shopping cart / Checkout -->
+### 🛒 Shopping Cart
 
-<!-- ADD SCREENSHOT 4: Admin panel / Product management -->
+![Shopping Cart](public/docs/images/Screenshot%202026-09-20%20231149.png)
 
-<!-- ADD SCREENSHOT 5: Order management (optional) -->
+### 🛍️ Store
+
+![Store](public/docs/images/Screenshot%202026-09-20%20231059.png)
+
+### 🏠 Homepage
+
+![Homepage](public/docs/images/Screenshot%202026-09-20%20231010.png)
 
 ---
 
@@ -35,7 +47,7 @@ Recommended length: 10–20 seconds
 ### 🛍️ Storefront
 
 * Product listing and details
-* Categories, brands, colors, and dynamic attributes
+* Product categories, brands, colors, and dynamic attributes
 * Dynamic pricing based on selected product color
 * Product search, filtering, and pagination
 * Shopping cart with stock validation
